@@ -7,6 +7,9 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",
+		"test:chrome": "npx playwright test --headed --browser=chromium",
+		"test:firefox": "npx playwright test --headed --browser=firefox",
+		"test:safari": "npx playwright test --headed --browser=webkit",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
