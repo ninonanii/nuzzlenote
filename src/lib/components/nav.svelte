@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount } from 'svelte'
 
 	let pages = [
 		{
@@ -14,15 +14,15 @@
 			name: 'Settings',
 			path: '/settings'
 		}
-	];
+	]
 
 	onMount(() => {
 		pages.forEach((page) => {
-			page.active = page.path === window.location.pathname;
-		});
+			page.active = page.path === window.location.pathname
+		})
 
-		pages = pages; // trigger reactivity
-	});
+		pages = pages // trigger reactivity
+	})
 </script>
 
 <div>
