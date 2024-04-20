@@ -22,11 +22,18 @@ Currently one step ahead of [the CSS spec](https://drafts.csswg.org/mediaqueries
 
 uses icons from [iconify](https://icon-sets.iconify.design/). they are downloaded to make them available offline as well. they do not use iconify for svelte to avoid using the iconify api because of its [downsides](https://iconify.design/docs/icons/icon-data).
 
+## fonts
+
+### Kantumruy Pro
+
+- https://fontsource.org/fonts/kantumruy-pro
+- https://github.com/anagata-design/kantumruy-pro?tab=readme-ov-file#about
+
 ## create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## Creating a project
+### Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
 
@@ -38,7 +45,7 @@ npm create svelte@latest
 npm create svelte@latest my-app
 ```
 
-## Developing
+### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -49,7 +56,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
