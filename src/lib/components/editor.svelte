@@ -73,11 +73,11 @@
 		width: 50ch;
 		max-width: 100%;
 		min-height: 300px;
-		border: 1px solid var(--color-border);
+		border: 1px solid var(--border-color-1);
 		border-radius: var(--size-1);
 		font-size: var(--size-3);
 		line-height: var(--size-4);
-		font-family: var(--font-family-monospace);
+		font-family: var(--font-family-mono);
 
 		@media (--md-n-above) {
 			font-size: var(--size-4);

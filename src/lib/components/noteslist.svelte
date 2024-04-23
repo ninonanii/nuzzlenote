@@ -13,7 +13,7 @@
 			<li>
 				<div class="note" data-id={note.id}>
 					<h2>{note.title}</h2>
-					<p>{note.content}</p>
+					<p>{@html note.content}</p>
 				</div>
 			</li>
 		{/each}
