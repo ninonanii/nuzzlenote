@@ -8,19 +8,17 @@
 	}) */
 
 	// props
-	export let id = null
+	export let id = db.activeNoteId || null
 
 	// refs
 	let editorTitle = ''
 	let editorContent = null
 
-	let currentId = id
-
 	const onContentInput = () => {
-		console.log('content input', id, currentId)
+		console.log('content input', id, db.activeNoteId)
 		// save content to db for current or new note
-		if (currentId) {
-			db.notes.update(currentId, { content: editorContent.innerHTML, updated: Date.now() })
+		if (db.activeNoteId) {
+			db.notes.update(db.activeNoteId, { content: editorContent.innerHTML, updated: Date.now() })
 		} else {
 			db.notes
 				.add({
@@ -31,16 +29,16 @@
 				})
 				.then((newId) => {
 					// update id for new note
-					currentId = newId
-					console.log('new note id', newId, currentId)
+					db.activeNoteId = newId
+					console.log('new note id', newId, db.activeNoteId)
 				})
 		}
 	}
 
 	onMount(() => {
 		// get current note if id is provided, otherwise create a new note
-		if (currentId) {
-			db.notes.get(currentId).then((note) => {
+		if (db.activeNoteId) {
+			db.notes.get(db.activeNoteId).then((note) => {
 				editorTitle = note.title
 				editorContent.innerHTML = note.content
 			})
@@ -73,11 +71,12 @@
 		width: 50ch;
 		max-width: 100%;
 		min-height: 300px;
-		border: 1px solid var(--border-color-1);
-		border-radius: var(--size-1);
+		border: 1px solid var(--border-color);
+		border-radius: var(--radius-1);
 		font-size: var(--size-3);
 		line-height: var(--size-4);
 		font-family: var(--font-family-mono);
+		padding: var(--size-3);
 
 		@media (--md-n-above) {
 			font-size: var(--size-4);

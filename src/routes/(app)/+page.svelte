@@ -4,7 +4,7 @@
 </script>
 
 <div class="container">
-	<h1>Welcome to Nuzzlenote</h1>
+	<h1>Welcome to nuzzlenote</h1>
 	<p>offline-first, customizable cozy writing space</p>
 	<p>check out <a href="/about">about us page</a></p>
 

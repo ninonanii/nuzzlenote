@@ -70,7 +70,6 @@
 	details {
 		--icon-rotate: 0deg;
 		--indent: var(--size-3);
-		--border-color: var(--border-color-1);
 
 		overflow: hidden;
 		display: grid;

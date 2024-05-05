@@ -16,7 +16,10 @@
 </script>
 
 <svelte:head>
-	<meta name="theme-color" content="#000000" />
+	<title>Notes</title>
+	<meta name="description" content="A simple note-taking app" />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
 </svelte:head>
 
 <slot />

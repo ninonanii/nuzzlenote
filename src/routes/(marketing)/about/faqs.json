@@ -1,14 +1,30 @@
 [
 	{
-		"question": "What's the meaning of life?",
-		"answer": "The answer to the ultimate question of life, the universe, and everything is 42."
+		"question": "Why use this app?",
+		"answer": "nuzzlenote is designed to be a cozy, distraction-free place to organize your thoughts and ideas. It makes some opinionated choices to keep things simple and minimalist, so you can focus on what's important. It's free, open source, offline-first, privacy-focused, customizable and a bunch things more. Give it a try and see if it works for you."
 	},
 	{
-		"question": "How do you like your coffee?",
-		"answer": "I prefer it black, like my soul."
+		"question": "How can I support this project?",
+		"answer": "Share it with someone who might also enjoy it or consider subscribing if you really love it. Thanks so much!"
 	},
 	{
-		"question": "How do you like your coffee?",
-		"answer": "I prefer it black, like my soul."
+		"question": "Is there an app for my phone?",
+		"answer": "Since this is a progressive web app, there should be an option to install it from your browser. This might be more convenient than having it inside your browser and also works on any device, not just your phone."
+	},
+	{
+		"question": "Why markdown?",
+		"answer": "Markdown is a lightweight markup language with plain text formatting syntax. It's easy to read and write, and it's widely supported. It's a great way to format your notes without getting in the way of your writing."
+	},
+	{
+		"question": "What does offline-first mean?",
+		"answer": "Offline-first means that the app works offline by default. Your notes are saved locally on your browser, so you can access them even when you are offline. Once you are ready, you can create an account to sync your notes across devices and save them on nuzzlenote servers."
+	},
+	{
+		"question": "Where are my notes stored?",
+		"answer": "By default, your notes are stored locally on your browser. If you create an account, your notes are also saved on nuzzlenote servers."
+	},
+	{
+		"question": "Any other questions?",
+		"answer": "Join the discord server or reach out on twitter @nuzzlenote."
 	}
 ]
