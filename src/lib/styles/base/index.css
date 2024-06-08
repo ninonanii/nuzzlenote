@@ -41,3 +41,20 @@ html {
 ::view-transition-new(root) {
 	animation: 0.2s linear both page-transition;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+[contenteditable] {
+	text-wrap: stable;
+}

@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<title>Notes</title>
+	<title>nuzzlenote</title>
 	<meta name="description" content="A simple note-taking app" />
 	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
