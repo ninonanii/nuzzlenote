@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte'
+	import { onNavigate } from '$app/navigation'
 
 	let pages = [
 		{
@@ -11,63 +12,56 @@
 			path: '/about'
 		},
 		{
-			name: 'Settings',
-			path: '/settings'
+			name: 'Pricing',
+			path: '/pricing'
 		}
 	]
 
-	onMount(() => {
+	const updateCurrentPage = () => {
 		pages.forEach((page) => {
 			page.active = page.path === window.location.pathname
 		})
 
 		pages = pages // trigger reactivity
+	}
+
+	onNavigate(() => {
+		updateCurrentPage()
+	})
+
+	onMount(() => {
+		updateCurrentPage()
 	})
 </script>
 
-<div>
-	<ul class="skip-links">
-		<li><a href="#main">Skip to main content</a></li>
-		<li><a href="#footer">Skip to footer</a></li>
-	</ul>
-	<nav aria-label="Main navigation">
+<nav aria-label="Main navigation">
+	<ul class="container" aria-label="Pages">
 		{#each pages as page}
-			<a href={page.path} aria-current={page.active ? 'page' : null}>{page.name}</a>
+			<li>
+				<a href={page.path} aria-current={page.active ? 'page' : null}>{page.name}</a>
+			</li>
 		{/each}
-	</nav>
-</div>
+	</ul>
+</nav>
 
 <style>
-	.skip-links {
-		position: fixed;
-		top: 0;
-		left: 0;
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
-		background-color: var(--bg-1);
-		z-index: var(--layer-skip-link);
-		transform: translateY(-100%);
-		transition: transform var(--transition);
-
-		/* TODO: fix those links overlaying regular nav on hover*/
-
-		&:focus-within {
-			transform: translateY(0);
-		}
-	}
-	.skip-links a {
-		padding: var(--size-3);
-		color: var(--text-1);
-	}
-
 	nav {
+		margin-block-end: var(--size-3);
+		padding: var(--size-3) 0;
 		display: flex;
+		align-items: start;
+		gap: var(--size-3);
+		background-color: var(--bg-1);
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
 		gap: var(--size-3);
 	}
-	nav a {
+	a {
 		text-decoration: none;
 	}
-	nav a[aria-current='page'] {
+	a[aria-current='page'] {
 		text-decoration: underline;
 	}
 </style>
